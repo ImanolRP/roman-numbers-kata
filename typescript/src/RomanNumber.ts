@@ -1,5 +1,6 @@
 export class RomanNumber {
   private static readonly equivalenceMap: Map<number, string> = new Map([
+    [10, 'X'],
     [9, 'IX'],
     [5, 'V'],
     [4, 'IV'],
