@@ -13,7 +13,7 @@ export class RomanNumber {
       RomanNumber.equivalenceMap.forEach((roman, arabic) => {
         if (rest >= arabic) {
           rest -= arabic
-          response = roman + response
+          response += roman
         }
       })
     }
