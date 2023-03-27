@@ -12,4 +12,10 @@ describe('roman-number-kata', () => {
 
     expect(romanNumber.convert(2)).toBe('II')
   })
+
+  it('should return III when 3 given', () => {
+    const romanNumber = new RomanNumber()
+
+    expect(romanNumber.convert(3)).toBe('III')
+  })
 })
