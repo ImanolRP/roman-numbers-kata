@@ -10,6 +10,7 @@ describe('roman-number-kata', () => {
     ${5}  | ${'V'} 
     ${6}  | ${'VI'} 
     ${9}  | ${'IX'} 
+    ${10}  | ${'X'} 
   `('should return "$expected" when "$given" given', ({ given, expected }) => {
     const romanNumber = new RomanNumber()
 
