@@ -4,6 +4,10 @@ export class RomanNumber {
       return 'II'
     }
 
+    if (input === 3) {
+      return 'III'
+    }
+
     return 'I'
   }
 }
