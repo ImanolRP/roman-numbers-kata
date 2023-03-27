@@ -4,6 +4,10 @@ export class RomanNumber {
       return 'IV'
     }
 
+    if (input === 5) {
+      return 'V'
+    }
+
     let response = ''
 
     for (let iterator = 0; iterator < input; iterator++) {
