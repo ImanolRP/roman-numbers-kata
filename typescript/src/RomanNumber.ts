@@ -1,17 +1,21 @@
 export class RomanNumber {
+  private static readonly equivalenceMap: Map<number, string> = new Map([
+    [5, 'V'],
+    [4, 'IV'],
+    [1, 'I']
+  ])
+
   convert (input: number): string {
-    if (input === 4) {
-      return 'IV'
-    }
-
-    if (input === 5) {
-      return 'V'
-    }
-
+    let rest = input
     let response = ''
 
-    for (let iterator = 0; iterator < input; iterator++) {
-      response += 'I'
+    while (rest > 0) {
+      RomanNumber.equivalenceMap.forEach((roman, arabic) => {
+        if (rest >= arabic) {
+          rest -= arabic
+          response = roman + response
+        }
+      })
     }
 
     return response
