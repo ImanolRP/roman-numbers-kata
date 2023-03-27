@@ -1,13 +1,9 @@
 export class RomanNumber {
   convert (input: number): string {
-    if (input === 2) {
-      return 'II'
+    let response = ''
+    for (let iterator = 0; iterator < input; iterator++) {
+      response += 'I'
     }
-
-    if (input === 3) {
-      return 'III'
-    }
-
-    return 'I'
+    return response
   }
 }
